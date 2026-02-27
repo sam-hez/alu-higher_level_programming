@@ -1,5 +1,9 @@
 #!/bin/bash
+# Print message
 echo "Compiling $PYFILE ..."
+# Compile Python file to __pycache__
 python3 -m py_compile "$PYFILE"
-mv "__pycache__/$(basename "$PYFILE" .py).cpython-"*".pyc" "$PYFILE"c 2>/dev/null
+# Move compiled file to $PYFILEc
+mv "__pycache__/$(basename "$PYFILE" .py)".cpython-*.pyc "$PYFILE"c 2>/dev/null
+# Remove cache folder
 rm -rf __pycache__
