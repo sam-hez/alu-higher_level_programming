@@ -19,6 +19,11 @@ class TestMaxInteger(unittest.TestCase):
         unordered = [1, 3, 4, 2]
         self.assertEqual(max_integer(unordered), 4)
 
+    def test_max_at_beginning(self):
+        """Test a list where the max is at the beginning."""
+        beginning = [4, 3, 2, 1]
+        self.assertEqual(max_integer(beginning), 4)
+
     def test_empty_list(self):
         """Test an empty list."""
         empty = []
@@ -42,12 +47,22 @@ class TestMaxInteger(unittest.TestCase):
     def test_string(self):
         """Test a string."""
         string = "Brennan"
-        self.assertEqual(max_integer(string), 'n')
+        self.assertEqual(max_integer(string), 'r')
 
     def test_list_of_strings(self):
         """Test a list of strings."""
         strings = ["Brennan", "is", "my", "name"]
         self.assertEqual(max_integer(strings), "name")
+
+    def test_one_negative(self):
+        """Test a list with one negative number."""
+        one_negative = [1, 2, -3, 4]
+        self.assertEqual(max_integer(one_negative), 4)
+
+    def test_only_negative(self):
+        """Test a list with only negative numbers."""
+        only_negative = [-1, -2, -3, -4]
+        self.assertEqual(max_integer(only_negative), -1)
 
     def test_none(self):
         """Test with None as argument (should raise TypeError)."""
