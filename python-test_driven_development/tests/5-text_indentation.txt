@@ -1,0 +1,41 @@
+The ``5-text_indentation`` module
+=============================
+
+Using ``text_indentation``
+------------------------
+
+Importing the function:
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Basic usage:
+    >>> text_indentation("Hello. How are you? Nice to meet you: ALU.")
+    Hello.
+    <BLANKLINE>
+    How are you?
+    <BLANKLINE>
+    Nice to meet you:
+    <BLANKLINE>
+    ALU.
+    <BLANKLINE>
+
+No space at the beginning/end of lines:
+    >>> text_indentation("  Lorem ipsum.  Quonam modo?  ")
+    Lorem ipsum.
+    <BLANKLINE>
+    Quonam modo?
+    <BLANKLINE>
+
+Empty string:
+    >>> text_indentation("")
+
+Type error (not a string):
+    >>> try:
+    ...     text_indentation(123)
+    ... except Exception as e:
+    ...     print(e)
+    text must be a string
+    >>> try:
+    ...     text_indentation(None)
+    ... except Exception as e:
+    ...     print(e)
+    text must be a string
