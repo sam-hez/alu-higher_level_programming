@@ -60,3 +60,15 @@ Zero division error:
     ... except Exception as e:
     ...     print(e)
     division by zero
+
+Missing argument:
+    >>> try:
+    ...     matrix_divided([[1, 2]])
+    ... except TypeError:
+    ...     print("missing argument")
+    missing argument
+    >>> try:
+    ...     matrix_divided()
+    ... except TypeError:
+    ...     print("missing argument")
+    missing argument

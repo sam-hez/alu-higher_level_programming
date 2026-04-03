@@ -47,3 +47,10 @@ Special case: float and negative
     ... except Exception as e:
     ...     print(e)
     size must be an integer
+
+Missing argument:
+    >>> try:
+    ...     print_square()
+    ... except TypeError:
+    ...     print("missing argument")
+    missing argument

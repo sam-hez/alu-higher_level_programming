@@ -39,3 +39,10 @@ Type error (not a string):
     ... except Exception as e:
     ...     print(e)
     text must be a string
+
+Missing argument:
+    >>> try:
+    ...     text_indentation()
+    ... except TypeError:
+    ...     print("missing argument")
+    missing argument
