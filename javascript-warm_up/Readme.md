@@ -1,1 +1,3 @@
-## JavaScript Warm Up Assignments
+## JavaScript Warm Up Assignments 
+
+Javascript warm up 
